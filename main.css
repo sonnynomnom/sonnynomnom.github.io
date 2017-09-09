@@ -24,4 +24,5 @@ img {
 
 canvas {
   background-image: url('17.gif');
+  background-size: cover;
 }
