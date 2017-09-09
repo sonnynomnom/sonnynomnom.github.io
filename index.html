@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Townie Records</title>
   <meta charset="utf-8"/>
@@ -9,102 +10,59 @@
 
 <body>
 
-<div class="container">
-  <div class="nav">
-  <h2>
-      <img src="logo.jpg" alt="Mountain View" style="width:100%; height:100%">
+  <canvas id='canv'></canvas>
+  <h2>VINYL EP OUT 9/21<br />
+      PREORDER COKE BOTTLE CLEAR 6"<a href="typeform.com">HERE</a><br />
 
+    <img src="haunts.jpg" width="400" heights="400" />
 
-       <a href="index.html">ggplot2</a></h2>
-
-  <ul>
-        <li><a href="example1.html">Shop<a></li>
-        <li><a href="example2.html">News<a></li>
-        <li><a href="example3.html">About<a></li>
-        <br>
-        <br>
-        <li><a href="presentation.pdf">Facebook</a></li>
-        <li><a href="report.pdf">Instagram</a></li>
-        <li><a href="report.pdf">YouTube</a></li>
-
-  </ul>
-
-  © 2017 Townie Records
-  Brooklyn, NY
-
-  </div>
-
-
-  <div class="main">
-  <h1>Townie Records</h1>
+    <iframe width="400" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/341656845%3Fsecret_token%3Ds-WmQXn&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
 
 
-  <h3>POSTURE - HAUNTS EP</h3>
-  <p>September 21st</>
+<p id="demo"></p>
 
-    <script src="//www.powr.io/powr.js" external-type="html"></script>
-     <div class="powr-countdown-timer" id="de866c64_1504977131"></div>
+<script>
+
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 21, 2017 18:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "0d 0h 0m 0s";
+    }
+}, 1000);
+
+
+</script>
 
 
 
-  <img src="haunts.jpg" alt="Mountain View" style="width:330px; height:330px">
+</h2>
+
+  <script src="app.js"></script>
 
 
 
-  <h1>Countdown Clock</h1>
-   <div id="clockdiv">
-     <div>
-       <span class="days"></span>
-       <div class="smalltext">Days</div>
-     </div>
-     <div>
-       <span class="hours"></span>
-       <div class="smalltext">Hours</div>
-     </div>
-     <div>
-       <span class="minutes"></span>
-       <div class="smalltext">Minutes</div>
-     </div>
-     <div>
-       <span class="seconds"></span>
-       <div class="smalltext">Seconds</div>
-     </div>
-   </div>
-
-
-
-
-  <p>"<a href="http://www.ggplot2.org">ggplot2</a> is a plotting system for R that tries to take the good parts of base and lattice graphics and none of the bad parts.
-         It takes care of many of the fiddly details that make plotting a hasssle (like drawing legends) as well as providing a powerful model of graphics that makes it easy to produce complex multi-layered graphics."</p>
-<p>To explain further, it is:</p>
-
-  <ul>
-  	<li>An implementation of the <i>Grammar of Graphics</i> by Leland Wilkinson</li>
-	<li>Created by <a href="https://twitter.com/hadleywickham?lang=en"> Hadley Wickham</a> while has was a graduate student at Iowa State University</li>
-	<li>A "third" graphics system for R (along with base and lattice)</li>
-</ul>
-
-  <p> Here is a <a href="resources.html">list of resources</a> that you will find useful.</p>
-
-  <br>
-  <p></p>
-<p><b>Why ggplot2?</b></p>
-<p>This package is good because it can do the quick-and-simple AND complex graphs, so you can use this one system for work from both ends of the spectrum; Quick easy plots AND plots in layers that evolve to tell detailed stories. The default colors and other aestheics of ggplot2 are also nicer. And the user can save plots as objects.<p>
-<p>And one of the biggest pros is that it is not very hard!
-After this tutorial, you will get some hands on experience with some of the basic ggplot2 functions.</p>
-
-<br>
-
-  <p><b>Installation</b></p>
-  <p>Available from CRAN via:
-  <p>install.packages("ggplot2")<p>
-  <br>
-  <p><b>Dataset</b></p>
-  <p>The dataset used in the tutorial is the Air Quality data from <a href="http://archive.ics.uci.edu/ml/index.html">UC Irvine Machine Learning Repo</a>. It has been converted into a .csv file (<a href="AirQualityUCI.csv">download</a>)<p>
-
-  </div>
-</div>
 </body>
-
 </html>
