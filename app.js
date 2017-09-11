@@ -8,8 +8,8 @@ Snowy();
 function Snowy() {
 
   var snow, arr = [];
-  var num = 200, tsc = 1, sp = 1;
-  var sc = 0.8, t = 0, mv = 20, min = 1;
+  var num = 90, tsc = 1, sp = 1;
+  var sc = 0.7, t = 0, mv = 20, min = 1;
     for (var i = 0; i < num; ++i) {
       snow = new Flake();
       snow.y = Math.random() * (h + 50);
@@ -28,6 +28,8 @@ function Snowy() {
     window.requestAnimationFrame(go);
 
       $.clearRect(0, 0, w, h);
+      $.fill();
+
       //
       // var img = new Image();
       // img.src = 'night2.jpg';
@@ -37,7 +39,7 @@ function Snowy() {
       //   $.fillRect(0, 0, w, h);
       // }
       //
-      $.fill();
+
 
 
       // $.clearRect(0, 0, w, h);
