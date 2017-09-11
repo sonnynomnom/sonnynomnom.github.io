@@ -20,6 +20,7 @@ h2 {
 img {
   opacity: 0.9;
   filter: alpha(opacity=90);
+  overflow: hidden;
 }
 
 /* for the spooky.gif background
