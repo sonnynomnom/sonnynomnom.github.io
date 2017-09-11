@@ -8,7 +8,7 @@ Snowy();
 function Snowy() {
 
   var snow, arr = [];
-  var num = 120, tsc = 1, sp = 1;
+  var num = 80, tsc = 1, sp = 1;
   var sc = 0.55, t = 0, mv = 20, min = 1;
     for (var i = 0; i < num; ++i) {
       snow = new Flake();

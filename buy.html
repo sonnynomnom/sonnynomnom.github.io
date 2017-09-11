@@ -12,20 +12,46 @@
 
   <canvas id='canv'></canvas>
 
-  <h2>To pre-order:
+  <h2>
+    <b>Pre-order</b>
 
+    <form action = "http://www.example.com/subscribe.php" method="get">
+
+      <p> Name: <input type="text" name="username" size="30" maxlength="30" />
+          <br />
+          <br />
+          Email:
+          <input type="email" name="email" size="30" maxlength="30" />
+          <br />
+          <br />
+
+          Shipping Method:
+          <br />
+
+          <input type="radio" name="shipping" value="mailed" />
+          Mail ($2)
+
+          <input type="radio" name="shipping" value="deliver" />
+          Deliver ($0)
+
+          <br />
+          <br />
+          Address:
+          <br />
+          <textarea rows="4" cols="40" id="comments">
+          </textarea>
+
+          <br />
+          <input type="submit" value="Submit" />
+
+      </form>
     <br />
     <br />
 
-    <a href="https://www.venmo.com">Venmo</a> $7 to @TownieRecords
+    <a href="https://www.venmo.com">Venmo</a> $7 + shipping to @TownieRecords
     <br />
     <br />
-    <img src="vinyl3.jpg" width="300" heights="200"/>
-    <br />
-    <img src="vinyl4.jpg" width="300" heights="200"/>
-    <br />
-    <br />
-    ~Limited Edition~ Coke Bottle Clear 7" Vinyls<br />
+
   </h2>
 
   <script src="app.js"></script>

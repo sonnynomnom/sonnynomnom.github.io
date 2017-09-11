@@ -17,6 +17,15 @@ h2 {
   color:hsla(255, 255%, 255%, 0.70);
 }
 
+
+h2 b {
+  font-size: 2em;
+}
+
+h2 i {
+  font-size: 1.5em;
+}
+
 img {
   opacity: 0.9;
   filter: alpha(opacity=90);
