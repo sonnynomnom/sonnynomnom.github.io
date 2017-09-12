@@ -1,7 +1,57 @@
 <?php
 
-if(isset($_POST['email'])) {
+if (isset($_POST['name') && ]$_POST['email'])) {
 
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $shipping = $_POST['shipping'];
+  $address = $_POST['address'];
+
+  $to = 'sonnynomnom@gmail.com';
+  $subject = "New Preorder";
+  $body = '<html>
+            <body>
+              <h2>Preorder</h2>
+              <br>
+              <p>Name:<br>'.$name.'</p>
+              <p>Email:<br>'.$email.'</p>
+              <p>Shipping:<br>'.$shipping.'</p>
+              <p>Address:<br>'.$address.'</p>
+            </body>
+          </html>';
+
+  // headers
+  $headers = "From: ".$name."\ <".$email.">\r\n";
+  $headers .= "Reply-To: ".$email."\r\n";
+  $headers .= "MIME-Version: 1.0\r\n";
+  $headers .= "Content-type: text/html; charset-utf-8";
+
+  // send
+  $send = mail($to, $subject, $body, $headers);
+
+  if ($send) {
+    echo '<br>';
+    echo 'Thanks for pre-ordering!';
+  }
+  else {
+    echo 'error';
+  }
+
+}
+
+?>
+  <!-- r\n".
+          'Reply-To: '.$email."\r\n" .
+          'X-Mailer: PHP/' . phpversion();
+          @mail($email_to, $email_subject, $email_message, $headers);
+
+
+          ?>
+
+
+
+
+  '
     // EDIT THE 2 LINES BELOW AS REQUIRED
     $email_to = "sonnynomnom@gmail.com";
     $email_subject = "Haunts EP Preorder";
@@ -75,12 +125,8 @@ $headers = 'From: '.$email."\r\n".
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);
 
-<!-- include your own success html here -->
 
-Thank you for contacting us. We will be in touch with you very soon.
-
-
-?>
+?> -->
 
 
 <!DOCTYPE html>
@@ -100,7 +146,7 @@ Thank you for contacting us. We will be in touch with you very soon.
   <h2>
     <b>Pre-order</b>
 
-    <form name ="shippingform" method="post" action="send_form_email.php">
+    <form method="post" action="">
 
       <p>
         <label>
@@ -131,7 +177,7 @@ Thank you for contacting us. We will be in touch with you very soon.
 
           <br />
 
-          <input type="submit" value="Submit" />
+          <button type="submit">Submit</button>
 
       </form>
     <br />
@@ -143,7 +189,7 @@ Thank you for contacting us. We will be in touch with you very soon.
 
   </h2>
 
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 
-</body>
+  </body>
 </html>
