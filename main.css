@@ -1,10 +1,10 @@
 body {
   background-color: hsla(250,0%,0%,1);
   /*background-image: url("night2.jpg");*/
-
   margin: 0px;
   overflow: scroll;
   font-family: 'Helvetica', cursive;
+  /*padding-top: 0px;*/
 }
 
 h2 {
@@ -12,6 +12,8 @@ h2 {
   position: absolute;
   text-align: center;
   top: 65%;
+  /*top: 100px;*/
+
   transform: translate(-50%, -50%);
   font-size: 1.05em;
   color:hsla(255, 255%, 255%, 0.75);
@@ -23,6 +25,10 @@ h2 b {
 
 h2 i {
   font-size: 1.3em;
+}
+
+h2 x {
+  font-size: 1.2em;
 }
 
 img {
