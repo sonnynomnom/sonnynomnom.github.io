@@ -12,51 +12,60 @@
 
   <canvas id='canv'></canvas>
 
-  <h2><b id="title">Posture - Haunts EP</b><br />
-    <i>9.21.17</i><br />
+  <h2>
 
-  <p id="demo"></p>
-    <script>
+    <b>Posture - Haunts EP</b>
+    <br>
 
-      // Set the date we're counting down to
-      var countDownDate = new Date("Sep 21, 2017 18:00:00").getTime();
-
-      // Update the count down every 1 second
-      var x = setInterval(function() {
-
-        // Get todays date and time
-        var now = new Date().getTime();
-
-        // Find the distance between now an the count down date
-        var distance = countDownDate - now;
-
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Output the result in an element with id="demo"
-        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
-
-        // If the count down is over, write some text
-        if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("demo").innerHTML = "0d 0h 0m 0s";
-        }
-      }, 1000);
-    </script>
+    <i>9.21.2017</i>
+    <br>
+    <br>
 
     <a href="info.html" target="_blank"><img src="haunts.jpg" width="375" heights="375" /></a>
+    <br>
 
-    <br />
-
-    <iframe width="375" height="115" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/342069066&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-    <br />
-    <br />
+    <iframe width="382" height="115" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/342069066&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+    <br>
+    <br>
 
     Pre-order vinyl + digital download <a href="preorder.html" target="_blank">HERE</a>
+    <br>
+
+    <p id="demo"></p>
+    <script>
+
+     // Set the date we're counting down to
+     var countDownDate = new Date("Sep 21, 2017 12:00:00").getTime();
+
+     // Update the count down every 1 second
+     var x = setInterval(function() {
+
+       // Get todays date and time
+       var now = new Date().getTime();
+
+       // Find the distance between now an the count down date
+       var distance = countDownDate - now;
+
+       // Time calculations for days, hours, minutes and seconds
+       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+       // Output the result in an element with id="demo"
+       document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+       + minutes + "m " + seconds + "s ";
+
+       // If the count down is over, write some text
+       if (distance < 0) {
+         clearInterval(x);
+         document.getElementById("demo").innerHTML = "0d 0h 0m 0s";
+       }
+     }, 3);
+
+   </script>
+
+   <a href="index.html"><img src="logo2.png" width="100" heights="100" /></a>
 
   </h2>
 
